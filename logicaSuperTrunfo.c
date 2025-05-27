@@ -7,7 +7,7 @@
 
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
-    char estado1[2], estado2[2];
+    char estado1, estado2;
     char codigo1[5], codigo2[5];
     char cidade1[20], cidade2[20];
     int populacao1, populacao2;
@@ -20,42 +20,42 @@ int main() {
 
     
     // Cadastro das Cartas:
-    printf("--Digite as informações da Carta 1--\n");
+    printf("Digite as informações da Carta 1\n");
     printf("Letra do Estado (A-H): ");
-    scanf("%s\n", &estado1);
+    scanf("%c", &estado1);
     printf("Código da Carta: ");
-    scanf("%s\n", codigo1);
+    scanf("%s", codigo1);
     printf("Nome da Cidade: ");
-    scanf("%[^\n]", cidade1);
+    scanf(" %[^\n]", cidade1);
     printf("População: ");
-    scanf("%d\n", &populacao1);
+    scanf("%d", &populacao1);
     printf("Área em Km²: ");
-    scanf("%.2f\n", &area1);
+    scanf("%.2f", &area1);
     printf("PIB: ");
-    scanf("%.2f\n", &pib1);
+    scanf("%.2f", &pib1);
     printf("Número de pontos turísticos: ");
-    scanf("%d\n", &pontosturisticos1);
+    scanf("%d", &pontosturisticos1);
     
     densidade1 = (float) populacao1 / area1;
     pibpercapita1 = (float) pib1 / populacao1;
     superpoder1 = (float) populacao1 + area1 + pib1 + pontosturisticos1;
 
     //Entrada de dados da Carta 2
-    printf("--Digite as informações da Carta 2--\n");
+    printf("Digite as informações da Carta 2\n");
     printf("Letra do Estado (A-H): ");
-    scanf("%c\n", &estado2);
+    scanf("%c", &estado2);
     printf("Código da Carta: ");
-    scanf("%c\n", &codigo2);
+    scanf("%s", codigo2);
     printf("Nome da Cidade: ");
-    scanf("[%^\n]", cidade2);
+    scanf(" %[^\n]", cidade2);
     printf("População: ");
-    scanf("%d\n", &populacao2);
+    scanf("%d", &populacao2);
     printf("Área: ");
-    scanf("%.2f\n", &area2);
+    scanf("%.2f", &area2);
     printf("PIB: ");
-    scanf("%.2f\n", pib2);
+    scanf("%.2f", pib2);
     printf("Pontos Turísticos: ");
-    scanf("%d\n", &pontosturisticos2);
+    scanf("%d", &pontosturisticos2);
 
     densidade2 = (float) populacao2 / area2;
     pibpercapita2 = (float) pib2 / populacao2;
