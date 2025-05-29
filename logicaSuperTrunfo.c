@@ -16,17 +16,17 @@ int main() {
     //Entrada de dados Carta 1
     printf("Digite as informações da Carta 1\n");
     printf("Letra do Estado (A-H): ");
-    scanf("%c\n", &estado1);
-    printf("Código da Carta: ");
-    scanf("%c\n", codigo1);
+    scanf(" %c", &estado1);
+    printf("Código da carta: ");
+    scanf("%s", codigo1);
     printf("Nome da Cidade: ");
-    scanf("%[^\n]", cidade1);
+    scanf(" %[^\n]", cidade1);
     printf("População: ");
-    scanf("%d\n", &populacao1);
+    scanf("%d", &populacao1);
     printf("Área em Km²: ");
-    scanf("%.2f\n", &area1);
+    scanf("%f", &area1);
     printf("PIB: ");
-    scanf("%.2f\n", &pib1);
+    scanf("%f", &pib1);
     printf("Número de pontos turísticos: ");
     scanf("%d\n", &pontosturisticos1);
     
@@ -37,19 +37,19 @@ int main() {
     //Entrada de dados da Carta 2
     printf("Digite as informações da Carta 2\n");
     printf("Letra do Estado (A-H): ");
-    scanf("%c\n", &estado2);
+    scanf(" %c", &estado2);
     printf("Código da Carta: ");
-    scanf("%s\n", codigo2);
+    scanf("%s", codigo2);
     printf("Nome da Cidade: ");
     scanf(" %[^\n]", cidade2);
     printf("População: ");
-    scanf("%d\n", &populacao2);
+    scanf("%d", &populacao2);
     printf("Área: ");
-    scanf("%.2f\n", &area2);
+    scanf("%f", &area2);
     printf("PIB: ");
-    scanf("%.2f\n", pib2);
+    scanf("%f", &pib2);
     printf("Pontos Turísticos: ");
-    scanf("%d\n", &pontosturisticos2);
+    scanf("%d", &pontosturisticos2);
 
     densidade2 = (float) populacao2 / area2;
     pibpercapita2 = (float) pib2 / populacao2;
@@ -80,8 +80,8 @@ int main() {
     printf("PIB per capita: %.2f\n", pibpercapita2);
     printf("Super Poder: %.2f pontos\n", superpoder2);
 
-    //Comparação de cartas, uso if else
-    printf("______________________________");
+    //Comparação de cartas, uso if e if-else
+    printf("\n______________________________\n");
     printf("**Resultado da comparação de cartas**\n");
     if(populacao1 > populacao2){
         printf("População: Carta 1 venceu!\n");
